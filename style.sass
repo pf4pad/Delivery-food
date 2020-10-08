@@ -130,6 +130,7 @@ body
 .card-info
   display: flex
   align-items: center
+  flex-wrap: wrap
 .rating
   margin-right: 26px
   font-style: normal
@@ -145,6 +146,11 @@ body
   color: #8C8C8C
 .price
   margin-right: 10px
+.category
+  text-overflow: ellipsis
+  overflow: hidden
+
+  min-width: 130px
 .price:after
   content: ""
   width: 5px
@@ -178,9 +184,95 @@ body
   align-items: center
 .social-link:not(:last-child)
   margin-right: 21px
-@media ( max-width: width 1366px )
+@media ( max-width: 1366px )
   .container
     min-width: 960px
   .promo
     background-position: top right -200px
     background-size: 750px
+
+  .category,
+  .price
+    font-size: 14px
+@media ( max-width: 992px )
+  .container
+    min-width: 750px
+  .promo
+    padding: 50px
+    background-size: 500px
+    background-position: center right -200px
+
+  .promo-text
+    font-size: 18px
+    min-width: 400px
+  .card
+    flex-basis: 49%
+  .footer-link
+    font-size: 16px
+@media ( max-width: 768px )
+  .container
+    min-width: 560px
+  .card-info
+    flex-wrap: wrap
+  .rating
+    flex-basis: 100%
+  .card-title
+    font-size: 18px
+  .promo-title
+    font-style: 24px
+    line-height: 1.4
+  .promo
+    background-size: 400px
+    background-position: bottom 50px right -200px
+  .promo-text
+    margin-top: 0
+@media ( max-width: 578px )
+  .container
+    width: 90%
+  .header
+    margin-top: 15px
+    order: 5
+    flex: 1
+  .promo
+    background-image: none
+  .promo-title
+    margin-bottom: 10px
+  .section-title
+    font-style: 20px
+  .cards
+    flex-basis: 100%
+  .card-image
+    width: 30%
+  .footer
+    padding: 30px 0
+  .footer-block
+    align-items: flex-start
+  .footer-nav
+    margin-left: 0
+    margin-right: 0
+    order: 0
+    display: flex
+    flex-direction: column
+  .footer-logo
+    margin-right: 15px
+    order: 1
+  .social-links
+    order: 2
+    margin-right: 15px
+
+@media ( max-width: 480px )
+  .button-text
+    display: none
+  .button-icon
+    margin: 0
+  .footer-block
+    flex-wrap: wrap
+    font-direction: column
+  .footer-logo
+    order: 0
+    margin-bottom: 20px
+  .footer-nav
+    margin-bottom: 20px
+    text-align: center
+  .footer-link
+    margin-right: 0
